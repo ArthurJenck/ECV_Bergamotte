@@ -1,0 +1,438 @@
+/*--------------------------------------------------
+GLOBAL
+---------------------------------------------------*/
+/* Auteur : Candidat 9
+Date : 13/12/2022
+Version : 1.0
+Site de l'auteur : http://candidat9.ecv-monsite.fr */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap");
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100px;
+}
+
+/*--------------------------------------------------*/
+header {
+  height: 100vh;
+  background-color: #f7f6f3;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b66b55;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.logo-pic {
+  width: 2.125rem;
+  height: 2.25rem;
+}
+
+.main-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+  font-size: 1.875rem;
+  margin: 0 0 0 1.25rem;
+  color: #fff;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.25rem;
+  list-style-type: none;
+  margin-right: 3.1875rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s all ease-in-out;
+}
+.nav-link img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.nav-link.active {
+  font-weight: 700;
+}
+.nav-link:hover {
+  font-weight: 700;
+}
+@media all and (max-width: 900px) {
+  .nav-link:hover {
+    font-weight: 300;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  padding: calc(4.375rem + 10vh) 8.3125rem 4.375rem 3.25rem;
+}
+
+.hero-pic {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+  font-weight: 700;
+  font-size: 3.125rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin: 3.25rem 0 1rem 0;
+  font-weight: 700;
+}
+
+.hero-paraph {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+  font-weight: 300;
+  margin-bottom: 3.25rem;
+}
+
+.hero-cta {
+  text-decoration: none;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  padding: 1.625rem 4rem;
+  text-transform: uppercase;
+  background-color: #799988;
+  border-radius: 50px;
+  transition: 0.2s all ease-in-out;
+}
+.hero-cta:hover {
+  background-color: rgba(121, 153, 136, 0.5);
+}
+@media all and (max-width: 900px) {
+  .hero-cta:hover {
+    background-color: #799988;
+  }
+}
+
+main {
+  background-color: #f7f6f3;
+}
+
+.product-categ {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.product-categ:nth-child(2) .categ-content {
+  order: 1;
+}
+
+.categ-content {
+  width: 50vw;
+  padding: 14.8rem 5.1875rem 14.8rem 8.3125rem;
+}
+
+.categ-pic {
+  width: 50vw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.categ-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+}
+
+.categ-paraph {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+  font-weight: 300;
+  margin: 0.85rem 0 3.3125rem 0;
+}
+
+.categ-cta {
+  text-decoration: none;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  padding: 1.625rem 4rem;
+  text-transform: uppercase;
+  background-color: #b66b55;
+  border-radius: 50px;
+  transition: 0.2s all ease-in-out;
+}
+.categ-cta:hover {
+  background-color: rgba(182, 107, 85, 0.5);
+}
+@media all and (max-width: 900px) {
+  .categ-cta:hover {
+    background-color: #b66b55;
+  }
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #799988;
+  padding: 7.6875rem 10.9375rem 8.625rem 10.9375rem;
+}
+
+.products-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+  color: #f7f6f3;
+  font-size: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.products-art-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.products-art {
+  background-color: #fff;
+  align-items: center;
+  position: relative;
+}
+
+.product-pic {
+  width: 21.5vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 32.0526893524vh;
+}
+
+.product-name {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1.5625rem 0 0.7275rem 0;
+}
+
+.product-price {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+  font-weight: 300;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-bottom: 3.609375rem;
+}
+
+.product-cta {
+  border: none;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  background-color: #b66b55;
+  color: #fff;
+  padding: 1.25rem;
+  transition: 0.2s all ease-in-out;
+  position: absolute;
+  bottom: -1.25rem;
+  left: 0;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.product-cta:hover {
+  background-color: rgba(182, 107, 85, 0);
+  color: #b66b55;
+  border: solid #b66b55 2px;
+}
+@media all and (max-width: 900px) {
+  .product-cta:hover {
+    background-color: #b66b55;
+    color: #fff;
+    border: none;
+  }
+}
+
+footer {
+  background-color: #b66b55;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.375rem 3.375rem 0 4.375rem;
+}
+
+.newsletter {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.news-input {
+  width: 100%;
+  height: 5.1875rem;
+  border-radius: 50px;
+  border: none;
+  padding-left: 2.875rem;
+  background-color: #f7f6f3;
+}
+
+.newsletter-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto 0;
+  right: 2.9375rem;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+  background-color: #f7f6f3;
+  border: none;
+}
+
+.footer-links {
+  margin-top: 4.4375rem;
+  border-top: #f7f6f3 1px solid;
+  border-bottom: #f7f6f3 1px solid;
+  padding: 2.4375rem 14rem;
+  width: 100%;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer-link {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: #383737;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-sep {
+  color: #fff;
+}
+
+.copyright {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: #000;
+  font-weight: 300;
+  color: #fff;
+  padding: 2.3125rem 0;
+}
+
+@media all and (max-width: 900px) {
+  .nav-list {
+    display: none;
+  }
+  .hero-pic {
+    display: none;
+  }
+  .product-categ {
+    display: none;
+  }
+  .newsletter {
+    display: none;
+  }
+  .hero {
+    width: 100%;
+  }
+  .products {
+    padding: 0;
+  }
+  .products-art-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .footer-list {
+    flex-direction: column;
+  }
+  .footer-links {
+    padding: 0;
+  }
+  a:hover {
+    all: 0;
+  }
+  .hero-paraph {
+    line-height: 208%;
+  }
+  .mobile-menu {
+    display: block;
+    align-self: center;
+    font-weight: 300;
+    padding-right: 1.1875rem;
+    color: #fff;
+  }
+  .products {
+    padding: 4.4375rem 1.8125rem 6.375rem 1.8125rem;
+  }
+  .product-pic {
+    width: 16.453125rem;
+  }
+  .products-art {
+    margin-bottom: 4.6875rem;
+  }
+  .products-art:last-child {
+    margin-bottom: 0;
+  }
+  footer {
+    padding: 3.125rem 0 0 0;
+  }
+  .footer-links {
+    border-top: none;
+    margin: 0;
+  }
+  .footer-list {
+    gap: 2.375rem;
+  }
+  .footer-sep,
+.sep-element {
+    display: none;
+  }
+  .footer-list-element:last-child {
+    margin-bottom: 3.375rem;
+  }
+}/*# sourceMappingURL=style.css.map */

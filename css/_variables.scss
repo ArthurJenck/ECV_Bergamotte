@@ -1,0 +1,61 @@
+$primary-color: #b66b55;
+$secondary-color: #799988;
+$bg-accent: #f7f6f3;
+$txt-color: #383737;
+$pure-white: #fff;
+$pure-black: #000;
+
+@mixin title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: $txt-color;
+}
+
+@mixin basic-txt {
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: $pure-black;
+  font-weight: 300;
+}
+
+@mixin basic-link($defined-color) {
+  text-decoration: none;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: $pure-white;
+  font-weight: 700;
+  padding: 1.625rem 4rem;
+  text-transform: uppercase;
+  background-color: $defined-color;
+  border-radius: 50px;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    background-color: rgba($color: $defined-color, $alpha: 0.5);
+  }
+  @media all and (max-width: "900px") {
+    &:hover {
+      background-color: $defined-color;
+    }
+  }
+}
+
+@mixin basic-btn {
+  border: none;
+  font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
+  color: $pure-white;
+  font-weight: 700;
+  background-color: $primary-color;
+  color: $pure-white;
+  padding: 1.25rem;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    background-color: rgba($color: $primary-color, $alpha: 0);
+    color: $primary-color;
+    border: solid $primary-color 2px;
+  }
+  @media all and (max-width: "900px") {
+    &:hover {
+      background-color: $primary-color;
+      color: $pure-white;
+      border: none;
+    }
+  }
+}
